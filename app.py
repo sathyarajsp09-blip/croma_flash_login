@@ -37,6 +37,9 @@ def has_sequential_chars(password, seq_len=3):
             if seq[i:i+seq_len] in password:
                 return True
     return False
+@app.before_first_request
+def create_tables():
+    db.create_all()
 
 
 # =====================
