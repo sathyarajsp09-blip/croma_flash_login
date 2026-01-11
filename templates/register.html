@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="background"></div>
+
+<div class="auth-container">
+  <h1>Welcome to Croma</h1>
+  <p class="subtitle">Login to continue shopping</p>
+
+  <ul class="auth-buttons">
+    <li><a href="/login">Login</a></li>
+    <li><a href="/register" class="active">Register</a></li>
+  </ul>
+{% if error %}
+  <p style="color:#f87171; text-align:center; margin-bottom:12px;">
+    {{ error }}
+  </p>
+{% endif %}
+
+  <form method="POST" action="/register" class="form">
+
+    <label for="uname">Username</label>
+    <input type="text" name="uname" id="uname" required>
+
+    <label for="pwd">Password</label>
+    <input type="password" name="pwd" id="pwd" required>
+
+    <label for="cpwd">Confirm Password</label>
+    <input type="password" name="cpwd" id="cpwd" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+
+    <button type="submit">SIGN UP</button>
+
+  </form>
+
+</div>
+</body>
+</html>

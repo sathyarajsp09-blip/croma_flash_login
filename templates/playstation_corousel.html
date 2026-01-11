@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Croma Layout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='playstation_corousel.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header>
+<nav class="navbar croma sticky-top">
+<div class="container-fluid d-flex align-items-center">
+<div class="logo">
+<img src="https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/CMS/Category%20icon/Final%20icon/Croma_Logo_acrkvn.svg">
+</div>
+<button class="menu-btn ms-3">&#9776; Menu</button>
+
+<div class="search-container ms-5">
+<input type="text" class="search-input" placeholder="What are you looking for ?">
+<img src="{{ url_for('static', filename='images_and_videos/download.png') }}" class="search-icon">
+</div>
+
+<div class="d-flex align-items-center ms-auto gap-4">
+
+<!-- div: location display -->
+<div class="locationbar">
+<img src="https://i.pinimg.com/474x/e1/81/b7/e181b7cb6dec98c4d8efb94cfa77471c.jpg">
+<span>Mumbai, <b>400049</b></span>
+</div>
+
+<!-- div: user sign-in -->
+<div class="Sign-in user-menu">
+    <img
+        src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+        class="user-icon"
+        alt="User"
+    >
+    <span class="caret">⌄</span>
+
+    <div class="logout-dropdown">
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</div>
+
+
+<!-- div: shopping cart -->
+<div class="cart">
+<img src="https://static.vecteezy.com/system/resources/thumbnails/001/504/962/small/shopping-cart-icon-free-vector.jpg">
+</div>
+
+</div>
+</div>
+</nav>
+</header>
+<section class="maincontainer">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Gaming</li>
+  </ol>
+</nav>
+    <h2 CLASS="header2style">Gaming Consoles</h2>
+    <section class="sectionstyle">
+    <div class="input-group mb-3 myfilter">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Alower_categories%3A867">Gaming Consoles</a></li>
+  </ul>
+    </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Brand</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3ASG-ManufacturerDetails-Brand%3ASamsung">Sony</a></li>
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Price</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Aprice_group%3A10%2C001+-+20%2C000">40,001 - 50,000 </a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Aprice_group%3A10%2C001+-+20%2C000%3Aprice_group%3A501+-+1%2C000">50,001 - 60,000</a></li>
+
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Delivery mode</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adelivery_mode%3AHome+Delivery%3Adelivery_mode%3AExpress+Delivery">Home Delivery</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adelivery_mode%3AHome+Delivery%3Adelivery_mode%3AExpress+Delivery">Express Delivery</a></li>
+
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">color</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adiscount_group%3A20%25+To+40%25">white</a></li>
+
+
+  </ul>
+        </div>
+
+        </section>
+    <section class="gridstyle">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <a href="https://www.croma.com/sony-playstation-5-1tb-ssd-digital-edition-slim-gaming-console-white-/p/316841" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/ps51tbd.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">SONY PlayStation 5 1TB SSD Digital Edition Slim Gaming Console (White)</h5>
+        <p class="card-text">₹49,990</p>
+      </div>
+
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://www.croma.com/sony-playstation-5-slim-1tb-ssd-gaming-console-white-/p/305985" class="card h-100">
+         <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/ps51tbfull.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">SONY PlayStation 5 Slim 1TB SSD Gaming Console (White)</h5>
+        <p class="card-text">₹54,990</p>
+      </div>
+    </a>
+  </div>
+</div>
+</section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>Buy Gaming Consoles online at Croma India</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <p>
+                Gaming consoles are a popular form of entertainment, providing users with the ultimate experience of immersive gaming. Whether you enjoy single-player games, multiplayer online battles, or interactive sports simulations, modern gaming consoles can offer something for everyone. Today, getting a perfect device from the market can be a tough task, as the plethora of options can be confusing. There are so many features to look out for. Find your favourite console online, with endless options and prices. You can find a variety of these devices online from brands, such as Sony, Amkette, and more.
+            </p>
+        </div>
+        <div class="blogwritestyle">
+
+        </div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>What to look for before buying Gaming Consoles</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    If you're looking to buy gaming consoles in India, there are a few things to consider before making your purchase. First, think about what type of gaming you enjoy and what features you need. Another important consideration is your budget. These gaming devices can range in price, with some gaming consoles under 10000 and others costing significantly more. Consider what you can afford and what features are most important to you. It's also a good idea to read reviews of other users and compare prices before making your purchase. Before you buy gaming consoles, you should also check what’s in the box. Most of these devices are available as bundles and offer two or three different free games. And, last but not least, go for a model that comes with warranty and after-sales services.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>The latest Gaming Consoles</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    Gaming consoles online have come a long way in recent years, with the latest models offering a range of exciting features and capabilities. They are designed to provide users with immersive gaming experiences, courtesy of their powerful processors, advanced graphics capabilities, and intuitive controls. One of the biggest advantages of these latest consoles is their versatility. With the ability to play both traditional games as well as mobile games, these gaming devices offer something for gamers of all types. Another important aspect of these latest consoles is their online capabilities. With the ability to connect to the internet, gamers can play with others from around the world and join online communities to share their gaming experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>Why buy Gaming Products from Croma?</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    With a wide range of consoles available, you're sure to find the perfect one for your gaming needs at Croma. We also have an extensive catalogue of gaming products, PC games, gaming laptops, keyboards, mice, gaming software, and more, so you can find everything you need in one place. Plus, with our regular offers and deals, you can get the best price for your favourite products. If you don’t have the budget for your dream gaming device, you can opt for our easy EMI plans. Finally, don't forget to take advantage of Croma's ZipCare plans. These plans offer an extended warranty, on-demand service and repairs, and device maintenance, so you can enjoy your gaming device for years to come.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</section>
+<footer class="site-footer">
+<div class="footer-grid">
+
+<div class="col-connect">
+<h3>Connect With Us</h3>
+<form class="newsletter"><input type="email" placeholder="Enter Email ID"><button>→</button></form>
+
+<div class="social">
+<a href="https://www.youtube.com/user/CromaRetail" class="yt"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+<a href="https://www.facebook.com/CromaRetail/" class="fb"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://www.instagram.com/croma.retail/" class="ig"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://www.linkedin.com/company/infiniti-retail-limited-croma---a-tata-enterprise" class="li"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"></a>
+<a href="https://twitter.com/cromaretail?s=11" class="tw"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+</div>
+
+<p class="copyright">© Copyright 2025 Croma. All rights reserved</p>
+</div>
+
+<div class="col with-left-border">
+<div class="inner-grid">
+
+<div>
+<h4>Useful Links</h4>
+<ul>
+<li><a href="https://www.croma.com/about-croma">About Croma</a></li>
+<li><a href="https://www.croma.com/helpAndSupport">Help And Support</a></li>
+<li><a href="https://www.croma.com/faq">FAQs</a></li>
+<li><a href="https://www.croma.com/lp-buying-guide">Buying Guide</a></li>
+<li><a href="https://www.croma.com/cancellation-and-return">Return Policy</a></li>
+<li><a href="https://www.croma.com/bulk-order-and-gift-card-enquiry?cm_source=HPBulkEnquiry&cm_medium=Footer&cm_campaign=BulkEnquir">B2B Orders</a></li>
+<li><a href="https://www.croma.com/store?location=default">Store Locator</a></li>
+<li><a href="https://www.croma.com/lp-croma-e-waste">E-Waste</a></li>
+<li><a href="https://www.croma.com/franchise-opportunity" class="special">Franchise Opportunity</a></li>
+</ul>
+</div>
+
+<div>
+<ul>
+<li><a href="https://www.croma.com/site-map">Site Map</a></li>
+<li><a href="https://www.croma.com/careers-at-croma">Careers At Croma</a></li>
+<li><a href="https://www.croma.com/terms-of-use">Terms Of Use</a></li>
+    <li><a href="https://www.croma.com/disclaimer">Disclaimer</a></li>
+<li><a href="https://www.croma.com/privacy-policy">Privacy Policy</a></li>
+<li><a href="https://www.croma.com/unboxed">Unboxed</a></li>
+<li><a href="https://www.croma.com/giftcard">Gift Card</a></li>
+<li><a href="https://www.croma.com/e-star-program">Croma E-Star</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="col with-left-border">
+<div class="inner-grid">
+
+<div>
+<h4>Products</h4>
+<ul>
+<li><a href="https://www.croma.com/televisions-accessories/c/997">Televisions & Accessories</a></li>
+<li><a href="https://www.croma.com/home-appliances/c/5">Home Appliances</a></li>
+<li><a href="https://www.croma.com/phones-wearables/c/1">Phones & Wearables</a></li>
+<li><a href="https://www.croma.com/computers-tablets/c/3">Computers & Tablets</a></li>
+<li><a href="https://www.croma.com/kitchen-appliances/c/864">Kitchen Appliances</a></li>
+<li><a href="https://www.croma.com/audio-video/c/292">Audio & Video</a></li>
+<li><a href="https://www.croma.com/health-fitness/c/11">Health & Fitness</a></li>
+</ul>
+</div>
+
+<div>
+<ul>
+<li><a href="https://www.croma.com/grooming-wellness/c/1021">Grooming & Personal Care</a></li>
+<li><a href="https://www.croma.com/cameras-accessories/c/2">Cameras & Accessories</a></li>
+<li><a href="https://www.croma.com/smart-devices/c/3002">Smart Devices</a></li>
+<li><a href="https://www.croma.com/gaming/c/7">Gaming</a></li>
+<li><a href="https://www.croma.com/accessories/c/8">Accessories</a></li>
+<li><a href="https://www.croma.com/searchB?q=Top%20Brands%3Arelevance&text=Top%20Brands">Top Brands</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

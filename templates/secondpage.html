@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Croma Layout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='secondpage.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header>
+<nav class="navbar croma sticky-top">
+<div class="container-fluid d-flex align-items-center">
+<div class="logo">
+<img src="https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/CMS/Category%20icon/Final%20icon/Croma_Logo_acrkvn.svg">
+</div>
+<button class="menu-btn ms-3">&#9776; Menu</button>
+
+<div class="search-container ms-5">
+<input type="text" class="search-input" placeholder="What are you looking for ?">
+<img src="{{ url_for('static', filename='images_and_videos/download.png') }}" class="search-icon">
+</div>
+
+<div class="d-flex align-items-center ms-auto gap-4">
+
+<!-- div: location display -->
+<div class="locationbar">
+<img src="https://i.pinimg.com/474x/e1/81/b7/e181b7cb6dec98c4d8efb94cfa77471c.jpg">
+<span>Mumbai, <b>400049</b></span>
+</div>
+
+<!-- div: user sign-in -->
+<div class="Sign-in user-menu">
+    <img
+        src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+        class="user-icon"
+        alt="User"
+    >
+    <span class="caret">⌄</span>
+
+    <div class="logout-dropdown">
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</div>
+
+<!-- div: shopping cart -->
+<div class="cart">
+<img src="https://static.vecteezy.com/system/resources/thumbnails/001/504/962/small/shopping-cart-icon-free-vector.jpg">
+</div>
+
+</div>
+</div>
+</nav>
+</header>
+<section class="maincontainer">
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">Home Appliances</li>
+  </ol>
+</nav>
+    <h2 CLASS="header2style">Home Appliances</h2>
+    <section class="sectionstyle">
+    <div class="input-group mb-3 myfilter">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Alower_categories%3A867">Inverter ACS</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Alower_categories%3A393">split ACS</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Alower_categories%3A393%3Alower_categories%3A746">storage water heaters</a></li>
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Brand</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3ASG-ManufacturerDetails-Brand%3ASamsung">Samsung</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3ASG-ManufacturerDetails-Brand%3ASamsung%3ASG-ManufacturerDetails-Brand%3ACroma">Croma</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3ASG-ManufacturerDetails-Brand%3ASamsung%3ASG-ManufacturerDetails-Brand%3ACroma%3ASG-ManufacturerDetails-Brand%3ALG">Something else here</a></li>
+
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Price</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Aprice_group%3A10%2C001+-+20%2C000">10,001 - 20,000</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Aprice_group%3A10%2C001+-+20%2C000%3Aprice_group%3A501+-+1%2C000">501 - 1,000 </a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Aprice_group%3A10%2C001+-+20%2C000%3Aprice_group%3A501+-+1%2C000%3Aprice_group%3A5%2C001+-+10%2C000">5,001 - 10,000</a></li>
+
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Delivery mode</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adelivery_mode%3AHome+Delivery%3Adelivery_mode%3AExpress+Delivery">Home Delivery</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adelivery_mode%3AHome+Delivery%3Adelivery_mode%3AExpress+Delivery">Express Delivery</a></li>
+
+  </ul>
+        </div>
+        <div class="input-group mb-3 myfilter">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Discount</button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adiscount_group%3A20%25+To+40%25">20% To 40%</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adiscount_group%3A40%25+To+60%25">40% To 60%</a></li>
+    <li><a class="dropdown-item" href="https://www.croma.com/home-appliances/c/5?q=%3Arelevance%3Adiscount_group%3ABelow+20%25">Below 20%</a></li>
+
+  </ul>
+        </div>
+
+        </section>
+    <section class="gridstyle">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <a href="https://www.croma.com/croma-8-kg-5-star-semi-automatic-washing-machine-with-magic-filter-crlw080smf248602-black-/p/300475" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/croma 8kg.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">Croma 8 kg 5 Star Semi Automatic Washing Machine with Magic Filter</h5>
+        <p class="card-text">₹9,490</p>
+      </div>
+ </a>
+  </div>
+  <div class="col">
+    <a href="https://www.croma.com/portronics-aero-breeze-178mm-3-blade-bldc-motor-table-fan-360-degree-cooling-white-/p/311601" class="card h-100">
+         <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/portronics aero.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">PORTRONICS Aero Breeze 178mm 3 Blade BLDC Motor Table Fan</h5>
+        <p class="card-text">₹879</p>
+      </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://www.croma.com/croma-7-in-1-convertible-1-5-ton-3-star-inverter-split-ac-with-auto-clean-function-2025-model-copper-condenser-crla018ind283265-/p/311927" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/croma 7 in 1.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">Croma 7 in 1 Convertible 1.5 Ton 3 Star Inverter Split AC with Auto clean function</h5>
+        <p class="card-text">₹28,990</p>
+      </div>
+    </a>
+  </div>
+</div>
+    </section>
+    <section class="gridstyle">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <a href="https://www.croma.com/safestab-11-amps-voltage-stabilizer-for-1-5t-air-conditioner-150-270-v-digital-display-vst400d-white-/p/217687" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/safestab.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">SafeStab 11 Amps Voltage Stabilizer For 1.5T Air Conditioner</h5>
+        <p class="card-text">₹₹2,499</p>
+      </div>
+
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://www.croma.com/samsung-7-kg-5-star-fully-automatic-top-load-washing-machine-wa70bg4441bytl-diamond-drum-lavender-gray-/p/260549" class="card h-100">
+         <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/samsung 7.5kg.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">SAMSUNG 7 kg 5 Star Fully Automatic Top Load Washing Machine</h5>
+        <p class="card-text">₹18,490</p>
+      </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/croma 7.5kg.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">Croma 7.5 kg 5 Star Fully Automatic Top Load Washing Machine</h5>
+        <p class="card-text">₹13,490</p>
+      </div>
+    </a>
+  </div>
+</div>
+    </section>
+     <section class="gridstyle">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <a href="https://www.croma.com/oakter-oakremote-universal-remote-360-degree-ip-coverage-white-/p/210990" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/oakter oak.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">Oakter OakRemote Universal Remote (360 Degree IP Coverage, White)</h5>
+        <p class="card-text">₹₹3,334</p>
+      </div>
+
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://www.croma.com/croma-bracket-for-air-conditioner-powder-coating-process-grey-/p/268398" class="card h-100">
+         <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/croma bracket.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">Croma Bracket For Air Conditioner (Powder Coating Process, Grey)</h5>
+        <p class="card-text">₹799</p>
+      </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="https://www.croma.com/cns-trolley-for-washing-machines-refrigerators-and-dishwashers-24-wheels-upto-350-l-black-/p/224669" class="card h-100">
+        <div class="image-wrap">
+      <img src="{{ url_for('static', filename='images_and_videos/CNS trolley.webp') }}" class="card-img-top" alt="image..">
+            </div>
+      <div class="card-body">
+        <h5 class="card-title">CNS Trolley for Washing Machines, Refrigerators, and Dishwashers</h5>
+        <p class="card-text">₹599</p>
+      </div>
+    </a>
+  </div>
+</div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>Buy Home Appliances online at Croma India</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    Whether you’re moving into a new home or redoing your existing one, you surely give a lot of thought to buying the right household appliances. In modern times, thanks to advancements in technology and manufacturing, most chores that were traditionally done by hand are being mechanised and even automated. Moreover, recent innovation has led to the development and use of devices that make your overall life comfortable and pleasant. Home appliance products not only help you save effort but also a lot of time. They also make your space more liveable by providing good ambient conditions, such as optimum heating or cooling.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>What to look for before buying Home Appliances</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    If you’re looking for a way to make your daily tasks easy, keep your home clean, and keep your rooms cool and fresh, visit the home appliance stores. For large home appliances, like refrigerators, washing machines, air conditioners, and air coolers, be sure to check the warranty and after-sales support before you buy one. Also, it will be best if you check the dimensions of the product to determine whether it will fit in the designated space you have at home. BEE ratings are a great way to determine energy efficiency before you buy home appliances online or in-store. You can also check for power and electrical requirements as well as surge protection features.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>Types of Home Appliances</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    There are many types of appliances and electrical equipment available to help you with your daily chores. Cleaning appliances include vacuum cleaners that help keep your home free of dust and dirt and washing machines and dryers to help you with your laundry. To keep your home ventilated and fresh, you can choose from various models of fans, air conditioners, and air coolers. If you live in a city where temperature drops are frequent, you can consider buying a room heater. To keep your food fresh and avoid frequent trips to the market to get groceries, you can store it in refrigerators and freezers. If you like a hot shower, you can choose from a variety of geysers that work on electricity, gas, or solar power. And, whether you love making your own upholstery or are into tailoring, a sewing machine will always come in handy. You can also find small items, like washing machine accessories at appliance stores
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="blogstyle">
+        <div class="blogcontainstyle1">
+            <h2>Why buy Home Appliances from Croma?</h2>
+        </div>
+        <div class="blogcontainstyle">
+            <div class="blogwritestyle">
+                <p>
+                    In order to ensure that your home appliances online shopping experience with us is exceptional, Croma not only offers great discounts but also insightful assistance to help you make the right buying decision. With every product online on Croma.com, you get the advantage of shopping for the best home appliances from the comfort of your home. You can also visit any of our outlets and ask the experts for advice on which product fits your requirements and budget. Croma also has flash sales, bank discounts, and EMI options, so you always get the best deals and prices. So, if you want to shop for home appliances in India, visit Croma today!
+                </p>
+            </div>
+        </div>
+    </section>
+</section>
+<footer class="site-footer">
+<div class="footer-grid">
+
+<div class="col-connect">
+<h3>Connect With Us</h3>
+<form class="newsletter"><input type="email" placeholder="Enter Email ID"><button>→</button></form>
+
+<div class="social">
+<a href="https://www.youtube.com/user/CromaRetail" class="yt"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+<a href="https://www.facebook.com/CromaRetail/" class="fb"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://www.instagram.com/croma.retail/" class="ig"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://www.linkedin.com/company/infiniti-retail-limited-croma---a-tata-enterprise" class="li"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"></a>
+<a href="https://twitter.com/cromaretail?s=11" class="tw"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+</div>
+
+<p class="copyright">© Copyright 2025 Croma. All rights reserved</p>
+</div>
+
+<div class="col with-left-border">
+<div class="inner-grid">
+
+<div>
+<h4>Useful Links</h4>
+<ul>
+<li><a href="https://www.croma.com/about-croma">About Croma</a></li>
+<li><a href="https://www.croma.com/helpAndSupport">Help And Support</a></li>
+<li><a href="https://www.croma.com/faq">FAQs</a></li>
+<li><a href="https://www.croma.com/lp-buying-guide">Buying Guide</a></li>
+<li><a href="https://www.croma.com/cancellation-and-return">Return Policy</a></li>
+<li><a href="https://www.croma.com/bulk-order-and-gift-card-enquiry?cm_source=HPBulkEnquiry&cm_medium=Footer&cm_campaign=BulkEnquir">B2B Orders</a></li>
+<li><a href="https://www.croma.com/store?location=default">Store Locator</a></li>
+<li><a href="https://www.croma.com/lp-croma-e-waste">E-Waste</a></li>
+<li><a href="https://www.croma.com/franchise-opportunity" class="special">Franchise Opportunity</a></li>
+</ul>
+</div>
+
+<div>
+<ul>
+<li><a href="https://www.croma.com/site-map">Site Map</a></li>
+<li><a href="https://www.croma.com/careers-at-croma">Careers At Croma</a></li>
+<li><a href="https://www.croma.com/terms-of-use">Terms Of Use</a></li>
+    <li><a href="https://www.croma.com/disclaimer">Disclaimer</a></li>
+<li><a href="https://www.croma.com/privacy-policy">Privacy Policy</a></li>
+<li><a href="https://www.croma.com/unboxed">Unboxed</a></li>
+<li><a href="https://www.croma.com/giftcard">Gift Card</a></li>
+<li><a href="https://www.croma.com/e-star-program">Croma E-Star</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="col with-left-border">
+<div class="inner-grid">
+
+<div>
+<h4>Products</h4>
+<ul>
+<li><a href="https://www.croma.com/televisions-accessories/c/997">Televisions & Accessories</a></li>
+<li><a href="https://www.croma.com/home-appliances/c/5">Home Appliances</a></li>
+<li><a href="https://www.croma.com/phones-wearables/c/1">Phones & Wearables</a></li>
+<li><a href="https://www.croma.com/computers-tablets/c/3">Computers & Tablets</a></li>
+<li><a href="https://www.croma.com/kitchen-appliances/c/864">Kitchen Appliances</a></li>
+<li><a href="https://www.croma.com/audio-video/c/292">Audio & Video</a></li>
+<li><a href="https://www.croma.com/health-fitness/c/11">Health & Fitness</a></li>
+</ul>
+</div>
+
+<div>
+<ul>
+<li><a href="https://www.croma.com/grooming-wellness/c/1021">Grooming & Personal Care</a></li>
+<li><a href="https://www.croma.com/cameras-accessories/c/2">Cameras & Accessories</a></li>
+<li><a href="https://www.croma.com/smart-devices/c/3002">Smart Devices</a></li>
+<li><a href="https://www.croma.com/gaming/c/7">Gaming</a></li>
+<li><a href="https://www.croma.com/accessories/c/8">Accessories</a></li>
+<li><a href="https://www.croma.com/searchB?q=Top%20Brands%3Arelevance&text=Top%20Brands">Top Brands</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,520 @@
+body {
+    background-color: #181818;
+    font-family: Arial, sans-serif;
+}
+/* Sticky navbar */
+.croma.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* HEADER */
+.croma {
+    width: 100%;
+    background-color: #050a12;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.croma img {
+    height: 35px;
+}
+
+/* SEARCH BAR CENTER SIZING */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 25px;
+    border-radius: 40px;
+    width: 480px;
+}
+
+
+.search-input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.search-icon {
+    width: 25px;
+}
+
+/* LOCATION + LOGIN + CART */
+.locationbar img,
+.Sign-in img,
+.cart img {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.locationbar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+}
+
+/* NAV SECTION */
+.navbar {
+    background-color: #111;
+    padding: 20px;
+    width: 100%;
+}
+.navbar_1 {
+    background-color: #111;
+
+}
+.headings {
+    color: white;
+    margin-bottom: 50px;
+    font-size: 22px;
+    padding-left:30px;
+    padding-top: 30px;
+    margin-top: 40px;
+
+}
+
+/* NAV ICON LIST */
+.navlist {
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;       /* Reduce space between items */
+    padding: 0 20px; /* Reduce left-right padding */
+
+}
+
+.nav-item {
+    text-align: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* ICON BOX */
+.icon-box {
+    width: 100px;
+    height: 100px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* FIX ICON SIZE (important) */
+.icon-box img {
+    width: 150px;
+    height: 110px;
+    object-fit: contain;
+}
+
+
+/* PROMO CARD SECTION */
+
+.promo-wrapper {
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.promo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Each promo card link */
+.promo-section a {
+    display: block;
+    width: 100%;
+    aspect-ratio: 365 / 196;
+    overflow: hidden;
+}
+
+/* The actual image */
+.promo-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+
+.promo-section img:hover {
+    transform: scale(1.04);
+}
+
+/* MENU BUTTON */
+.menu-btn {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 22px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.slidebar img{
+    height:100px;
+    margin-right: 25px;
+}
+.slidebar{
+    overflow:hidden;
+    white-space:nowrap;
+    width:100%;
+}
+.slidebar-content{
+    animation:infinitescroll 12s linear infinite;
+    display: inline-flex;
+}
+@keyframes infinitescroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+
+    }
+}
+.skill{
+    color:white;
+    margin-left: 45px;
+    font-size: 25px;
+    font-weight: bold;
+margin-bottom: 45px;
+
+
+}
+.filler {
+    margin-top: 45px;
+    border-radius: 10px;
+    border: 10px;
+    margin-bottom:35px;
+    padding-left: 30px;
+
+}
+.filler4 img{
+    display:flex;
+    width:100%
+
+
+}
+.filler img{
+    margin-top: 35px;
+    width:96%;
+    border-radius: 30px;
+}
+.filler-content1 a{
+    margin-left: 30px;
+    display:flex;
+    width:300px;
+
+}
+.filler-content1{
+
+}
+.filler1 {
+    padding-left: 20px;
+    border: 10px;
+    border-radius: 40px;
+}
+.filler-content1{
+    display:flex;
+    object-fit: contain;
+}
+
+.filler-content1 img{
+    width:100%;
+    height: 240px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+
+}
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 20px;
+    padding: 20px;
+}
+.brand-grid img{
+    width:230px;
+     justify-content: center;
+
+}
+.brand-grid2{
+    display: flex;
+
+}
+.brand-grid2 img{
+    height: 200px;
+
+}
+.brand-card {
+
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: scale(1.05);
+}
+
+.brand-card img {
+    width: 230px;
+    height: auto;
+    object-fit: contain; /* prevents distortion */
+}
+.brand-card1 img {
+    margin-left: 10px;
+    padding-left: 40px;
+    width: 22%;
+    height: auto;
+    object-fit: contain; /* prevents distortion */
+}
+.hstyle{
+    color: white;
+    margin:40px 30px 20px 50px;
+    font-weight: bold;
+
+}
+.brand-card2 img{
+    margin-left: 10px;
+    padding-left: 40px;
+    width: 230px;
+    height: 150px;
+    object-fit: contain; /* prevents distortion */
+}
+
+:root {
+  --bg: #111;
+  --white: #fff;
+  --border: #333;
+  --aqua: #00e0d1;
+}
+
+body {
+  background: #0f0f0f;
+  font-family: Arial, sans-serif;
+}
+
+/* FOOTER WRAPPER */
+.site-footer {
+  background: var(--bg);
+  color: var(--white);
+  padding: 50px 80px;
+  font-weight: bold;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+/* FIRST GRID */
+.col-connect h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.newsletter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+}
+
+.newsletter button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/* Social Icons */
+.social {
+  display: flex;
+  gap: 18px;
+  margin: 20px 0;
+}
+
+.social a {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.social a img {
+  width: 20px;
+}
+
+/* Icon Hover Colors */
+.social .yt:hover { background: #FF0000; }
+.social .fb:hover { background: #1877F2; }
+.social .ig:hover { background: #E4405F; }
+.social .li:hover { background: #0A66C2; }
+.social .tw:hover { background: #1DA1F2; }
+
+.social a:hover img {
+  filter: invert(1); /* make icon white */
+}
+
+/* COPYRIGHT */
+.copyright {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* SECOND & THIRD GRID */
+.with-left-border {
+  border-left: 1px solid var(--border);
+  padding-left: 30px;
+}
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.inner-grid h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.inner-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inner-grid li {
+  margin: 10px 0;
+}
+
+.inner-grid a {
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.inner-grid a:hover {
+  color: var(--aqua);
+  margin-left: 5px;
+}
+
+/* Special green link */
+.special {
+  color: #00c389;
+}
+.product-card {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.product-card img {
+  border-radius: 18px 18px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card .card-body {
+  padding: 15px;
+}
+/* USER LOGOUT DROPDOWN */
+.user-menu {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+
+.user-menu .user-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.user-menu .caret {
+    color: white;
+    font-size: 14px;
+    margin-left: 4px;
+}
+
+.logout-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #141414;
+    border-radius: 6px;
+    min-width: 120px;
+    display: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+
+
+.logout-dropdown a {
+    display: block;
+    padding: 10px 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.logout-dropdown a:hover {
+    background-color: #1e1e1e;
+}
+
+/* Show dropdown on hover */
+.user-menu:hover .logout-dropdown {
+    display: block;
+}
+/* Invisible hover bridge to prevent dropdown flicker */
+.user-menu::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    height: 12px;
+    background: transparent;
+}

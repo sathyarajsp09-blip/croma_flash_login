@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Croma Layout</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<header>
+<nav class="navbar croma sticky-top">
+<div class="container-fluid d-flex align-items-center">
+<div class="logo">
+<img src="https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/CMS/Category%20icon/Final%20icon/Croma_Logo_acrkvn.svg">
+</div>
+<button class="menu-btn ms-3">&#9776; Menu</button>
+
+<div class="search-container ms-5">
+<input type="text" class="search-input" placeholder="What are you looking for ?">
+<img src="{{ url_for('static', filename='images_and_videos/download.png') }}" class="search-icon">
+</div>
+
+<div class="d-flex align-items-center ms-auto gap-4">
+
+<!-- div: location display -->
+<div class="locationbar">
+<img src="https://i.pinimg.com/474x/e1/81/b7/e181b7cb6dec98c4d8efb94cfa77471c.jpg">
+<span>Mumbai, <b>400049</b></span>
+</div>
+
+<!-- div: user sign-in -->
+<div class="Sign-in user-menu">
+    <img
+        src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+        class="user-icon"
+        alt="User"
+    >
+    <span class="caret">⌄</span>
+
+    <div class="logout-dropdown">
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</div>
+
+<!-- div: shopping cart -->
+<div class="cart">
+<img src="https://static.vecteezy.com/system/resources/thumbnails/001/504/962/small/shopping-cart-icon-free-vector.jpg">
+</div>
+
+</div>
+</div>
+</nav>
+</header>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+</div>
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<a href="{{ url_for('playstation') }}">
+<img src="{{ url_for('static', filename='images_and_videos/ps5.webp') }}" class="d-block w-100">
+</a>
+</div>
+
+<div class="carousel-item">
+<a href="https://www.croma.com/grooming-personal-care/personal-grooming-products/c/1021111?q=%3Arelevance%3Adelivery_mode%3AHome+Delivery">
+<img src="{{ url_for('static', filename='images_and_videos/trimmer.webp') }}" class="d-block w-100">
+</a>
+</div>
+
+<div class="carousel-item">
+<a href="https://www.croma.com/lp-weekly-circuit">
+<img src="{{ url_for('static', filename='images_and_videos/weeklyoffer.webp') }}" class="d-block w-100">
+</a>
+</div>
+
+<div class="carousel-item">
+<a href="https://www.croma.com/google-pixel-10-5g-12gb-ram-256gb-indigo-/p/318397">
+<img src="{{ url_for('static', filename='images_and_videos/weeklyoffer1.webp') }}" class="d-block w-100">
+</a>
+</div>
+
+<div class="carousel-item">
+<a href="{{ url_for('secondpage') }}">
+<img src="{{ url_for('static', filename='images_and_videos/frontpage.webp') }}" class="d-block w-100">
+</a>
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+</div>
+
+<!-- div: horizontal bank-offers scroller -->
+<div class="slidebar">
+<h2 class="hstyle">Exciting Bank Offers For You</h2>
+<div class="slidebar-content">
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/AU BANK.png') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/IDFC.png') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/IDFC_58deBj921W.webp') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/tata.webp') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/AU BANK.png') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/IDFC.png') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/IDFC_58deBj921W.webp') }}"></a>
+<a href="#"><img src="{{ url_for('static', filename='images_and_videos/tata.webp') }}"></a>
+</div>
+</div>
+
+<!-- div: skill-building promo -->
+<div class="filler">
+<span class="skill">Upcoming Skill-Building Session</span>
+<div class="filler-content">
+<a href="https://www.croma.com/lp-hp-croma-masterclass">
+<img src="{{ url_for('static', filename='images_and_videos/kool.webp') }}">
+</a>
+</div>
+</div>
+
+<!-- div: featured product grid -->
+<div class="brand-grid1">
+<h2 class="hstyle">What's Hot</h2>
+
+<a href="https://www.croma.com/oppo-a5x-5g-4gb-ram-64gb-laser-white-/p/317079#" class="brand-card1">
+    <img src="{{ url_for('static', filename='images_and_videos/oneplus.webp') }}">
+</a>
+<a href="https://www.croma.com/campaign/croma-tvs/c/6692?q=%3Aprice-asc%3ASG-TelevisionScreenSpecifications-Size-Inches_range%3A55+-+64%3ASG-TelevisionScreenSpecifications-Size-Inches_range%3A65+%26+Above%3Adelivery_mode%3AHome+Delivery" class="brand-card1">
+    <img src="{{ url_for('static', filename='images_and_videos/LED.webp') }}">
+</a>
+<a href="https://www.croma.com/campaign/top-selling-refrigerators/c/7079?q=%3Aprice-asc" class="brand-card1">
+    <img src="{{ url_for('static', filename='images_and_videos/laptops.webp') }}">
+</a>
+<a href="https://www.croma.com/campaign/android-tablet-offers/c/6547?q=%3Aprice-asc%3Adelivery_mode%3AHome+Delivery" class="brand-card1">
+    <img src="{{ url_for('static', filename='images_and_videos/AC.webp') }}"></a>
+
+</div>
+<h2 class="hstyle">Croma Exclusives: Hidden Deals Inside!</h2>
+
+<!-- div: product cards -->
+<div class="container mt-4">
+<div class="row g-4">
+
+<div class="col-md-3">
+<a href="https://www.croma.com/croma-81-28-cm-32-inch-led-hd-ready-smart-linux-tv-with-a+-grade-led-panel-2025-model-/p/316060" class="text-decoration-none">
+<img src="{{ url_for('static', filename='images_and_videos/cromatv.webp') }}" class="card-img-top">
+<div class="card product-card bg-dark text-white border-0">
+<div class="card-body">
+<h6 class="card-title">Croma 81.28 cm (32 inch) LED HD Ready Smart Linux TV...</h6>
+<p class="card-text"><span class="fw-bold">₹8,690.00</span> <span class="text-muted text-decoration-line-through">₹13,990.00</span></p>
+</div>
+</div>
+</a>
+</div>
+
+<div class="col-md-3">
+<a href="https://www.croma.com/croma-80-cm-32-inch-hd-led-google-tv-with-dolby-audio-2025-model-/p/317116" class="text-decoration-none">
+<img src="{{ url_for('static', filename='images_and_videos/cromatv1.webp') }}" class="card-img-top">
+<div class="card product-card bg-dark text-white border-0">
+<div class="card-body">
+<h6 class="card-title">Croma 80 cm (32 inch) HD LED Google TV with Dolby...</h6>
+<p class="card-text"><span class="fw-bold">₹9,990.00</span> <span class="text-muted text-decoration-line-through">₹19,000.00</span></p>
+</div>
+</div>
+</a>
+</div>
+
+<div class="col-md-3">
+<a href="#" class="text-decoration-none">
+<img src="{{ url_for('static', filename='images_and_videos/cromatv2.webp') }}" class="card-img-top">
+<div class="card product-card bg-dark text-white border-0">
+<div class="card-body">
+<h6 class="card-title">Croma 81.28 cm (32 inch) QLED Smart Google TV 5.0...</h6>
+<p class="card-text"><span class="fw-bold">₹10,990.00</span> <span class="text-muted text-decoration-line-through">₹18,000.00</span></p>
+</div>
+</div>
+</a>
+</div>
+
+<div class="col-md-3">
+<a href="#" class="text-decoration-none">
+<img src="{{ url_for('static', filename='images_and_videos/cromatv3.webp') }}" class="card-img-top">
+<div class="card product-card bg-dark text-white border-0">
+<div class="card-body">
+<h6 class="card-title">Croma 109.22 cm (43 inch) LED 4K Ultra HD Smart TV...</h6>
+<p class="card-text"><span class="fw-bold">₹18,990.00</span> <span class="text-muted text-decoration-line-through">₹25,000.00</span></p>
+</div>
+</div>
+</a>
+</div>
+
+</div>
+</div>
+<div class="filler1">
+<span class="skill">GST Bachat Utsav</span>
+<div class="filler-content1">
+<a href="#">
+<img src="{{ url_for('static', filename='images_and_videos/bacsat.webp') }}" alt="GST">
+<img src="{{ url_for('static', filename='images_and_videos/bascat0.webp') }}" alt="monitor">
+<img src="{{ url_for('static', filename='images_and_videos/bascat1.webp') }}" alt="AC">
+    <img src="{{ url_for('static', filename='images_and_videos/bascat2.webp') }}" alt="washing machine">
+</a>
+</div>
+</div>
+
+<!-- div: extra promos -->
+<div class="filler"><span class="skill">Easy e-waste recycling with Croma</span><div class="filler-content"><a href="https://www.croma.com/store?location=default">
+    <img src="{{ url_for('static', filename='images_and_videos/ewasted.webp') }}" alt="image">
+</a>
+</div></div>
+
+
+<div class="filler"><span class="skill">No More Worrying About Your Appliances</span>
+    <div class="filler-content"><a href="https://www.croma.com/zipcare">
+        <img src="{{ url_for('static', filename='images_and_videos/electronics sale.webp') }}">
+    </a>
+    </div>
+</div>
+
+<div class="filler"><span class="skill">Experience Croma On Tata Neu!</span>
+    <div class="filler-content"><a href="https://www.tataneu.com/native-electronics/slp">
+        <img src="{{ url_for('static', filename='images_and_videos/neucoins.webp') }}">
+    </a>
+    </div>
+</div>
+
+<!-- navbar: icon navigation strip -->
+<nav class="navbar_1">
+    <h2 class="headings">Exclusively Curated For You</h2>
+
+    <ul class="navlist">
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.croma.com/croma-store/b/b-0082">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images_and_videos/Croma_Collections_aer8cq.webp') }}">
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.croma.com/lp-emi-store">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images_and_videos/01_50_sa0hk3.webp') }}">
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.croma.com/lp-deals-corner">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images_and_videos/deals corner.webp') }}">
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.croma.com/campaign/deal-of-the-week/c/543?q=%3Adiscount-desc">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images_and_videos/deal of the week.webp') }}">
+                </div>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="https://www.croma.com/lp-croma-e-waste">
+                <div class="icon-box">
+                    <img src="{{ url_for('static', filename='images_and_videos/ewaste.webp') }}">
+                </div>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+<!-- div: final promo section -->
+<section class="promo-wrapper">
+<div class="promo-section">
+<a href="https://www.croma.com/giftcard" class="promo-card"><img src="{{ url_for('static', filename='images_and_videos/1Gift_dflts4.webp') }}"></a>
+<a href="https://www.croma.com/indulge" class="promo-card"><img src="{{ url_for('static', filename='images_and_videos/Indulge_rve6v9.webp') }}"></a>
+</div>
+</section>
+<div class="filler">
+<span class="skill">Why Croma?</span>
+<div class="filler-content">
+<img src="{{ url_for('static', filename='images_and_videos/Why-Croma_t2lgxr.webp') }}">
+</div>
+</div>
+
+<!-- div: brand logos -->
+<div class="brand-grid">
+<a href="https://www.croma.com/apple-store/b/b-0025">
+    <img src="{{ url_for('static', filename='images_and_videos/apple.webp') }}" alt="apple"></a>
+<a href="https://www.croma.com/bose-store/b/b-0053">
+    <img src="{{ url_for('static', filename='images_and_videos/bose.webp') }}" alt="bose"></a>
+<a href="https://www.croma.com/croma-store/b/b-0082">
+    <img src="{{ url_for('static', filename='images_and_videos/croma.webp') }}" alt="croma store"></a>
+<a href="https://www.croma.com/dell-store/b/b-0086">
+    <img src="{{ url_for('static', filename='images_and_videos/dell.webp') }}" alt="s"></a>
+<a href="https://www.croma.com/haier-store/b/b-0151"><img src="{{ url_for('static', filename='images_and_videos/haier.webp') }}"></a>
+</div>
+
+<!-- footer: site footer with links -->
+<footer class="site-footer">
+<div class="footer-grid">
+
+<div class="col-connect">
+<h3>Connect With Us</h3>
+<form class="newsletter"><input type="email" placeholder="Enter Email ID"><button>→</button></form>
+
+<div class="social">
+<a href="https://www.youtube.com/user/CromaRetail" class="yt"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></a>
+<a href="https://www.facebook.com/CromaRetail/" class="fb"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+<a href="https://www.instagram.com/croma.retail/" class="ig"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"></a>
+<a href="https://www.linkedin.com/company/infiniti-retail-limited-croma---a-tata-enterprise" class="li"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"></a>
+<a href="https://twitter.com/cromaretail?s=11" class="tw"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"></a>
+</div>
+
+<p class="copyright">© Copyright 2025 Croma. All rights reserved</p>
+</div>
+
+<div class="col with-left-border">
+<div class="inner-grid">
+
+<div>
+<h4>Useful Links</h4>
+<ul>
+<li><a href="https://www.croma.com/about-croma">About Croma</a></li>
+<li><a href="https://www.croma.com/helpAndSupport">Help And Support</a></li>
+<li><a href="https://www.croma.com/faq">FAQs</a></li>
+<li><a href="https://www.croma.com/lp-buying-guide">Buying Guide</a></li>
+<li><a href="https://www.croma.com/cancellation-and-return">Return Policy</a></li>
+<li><a href="https://www.croma.com/bulk-order-and-gift-card-enquiry?cm_source=HPBulkEnquiry&cm_medium=Footer&cm_campaign=BulkEnquir">B2B Orders</a></li>
+<li><a href="https://www.croma.com/store?location=default">Store Locator</a></li>
+<li><a href="https://www.croma.com/lp-croma-e-waste">E-Waste</a></li>
+<li><a href="https://www.croma.com/franchise-opportunity" class="special">Franchise Opportunity</a></li>
+</ul>
+</div>
+
+<div>
+<ul>
+<li><a href="https://www.croma.com/site-map">Site Map</a></li>
+<li><a href="https://www.croma.com/careers-at-croma">Careers At Croma</a></li>
+<li><a href="https://www.croma.com/terms-of-use">Terms Of Use</a></li>
+<li><a href="https://www.croma.com/disclaimer">Disclaimer</a></li>
+<li><a href="https://www.croma.com/privacy-policy">Privacy Policy</a></li>
+<li><a href="https://www.croma.com/unboxed">Unboxed</a></li>
+<li><a href="https://www.croma.com/giftcard">Gift Card</a></li>
+<li><a href="https://www.croma.com/e-star-program">Croma E-Star</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="col with-left-border">
+<div class="inner-grid">
+
+<div>
+<h4>Products</h4>
+<ul>
+<li><a href="https://www.croma.com/televisions-accessories/c/997">Televisions & Accessories</a></li>
+<li><a href="https://www.croma.com/home-appliances/c/5">Home Appliances</a></li>
+<li><a href="https://www.croma.com/phones-wearables/c/1">Phones & Wearables</a></li>
+<li><a href="https://www.croma.com/computers-tablets/c/3">Computers & Tablets</a></li>
+<li><a href="https://www.croma.com/kitchen-appliances/c/864">Kitchen Appliances</a></li>
+<li><a href="https://www.croma.com/audio-video/c/292">Audio & Video</a></li>
+<li><a href="https://www.croma.com/health-fitness/c/11">Health & Fitness</a></li>
+</ul>
+</div>
+
+<div>
+<ul>
+<li><a href="https://www.croma.com/grooming-wellness/c/1021">Grooming & Personal Care</a></li>
+<li><a href="https://www.croma.com/cameras-accessories/c/2">Cameras & Accessories</a></li>
+<li><a href="https://www.croma.com/smart-devices/c/3002">Smart Devices</a></li>
+<li><a href="https://www.croma.com/gaming/c/7">Gaming</a></li>
+<li><a href="https://www.croma.com/accessories/c/8">Accessories</a></li>
+<li><a href="https://www.croma.com/searchB?q=Top%20Brands%3Arelevance&text=Top%20Brands">Top Brands</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+</footer>
+
+</body>
+</html>
