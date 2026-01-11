@@ -9,8 +9,7 @@ app.secret_key = "secret123"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///instance/database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-with app.app_context():
-    db.create_all()
+
 
 # =====================
 # MODELS
@@ -135,4 +134,6 @@ def logout():
 # APP START
 # =====================
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
     app.run()
