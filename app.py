@@ -16,9 +16,10 @@ app.secret_key = "secret123"
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if DATABASE_URL:
+    # Render / Production (PostgreSQL)
     app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
 else:
-    # works locally + on Render
+    # Local development (SQLite)
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///instance/database.db"
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -127,11 +128,9 @@ def logout():
     return redirect(url_for("home"))
 
 # =====================
-# APP START
+# APP START (SAFE)
 # =====================
 if __name__ == "__main__":
-    # SAFE DB INIT (Flask 3 compatible)
     with app.app_context():
         db.create_all()
-
     app.run()
