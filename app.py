@@ -16,13 +16,16 @@ app.secret_key = "secret123"
 DATABASE_URL = os.environ.get("DATABASE_URL")
 
 if DATABASE_URL:
-    # Render / Production (PostgreSQL)
+    # Fix for Render postgres:// vs postgresql://
+    if DATABASE_URL.startswith("postgres://"):
+        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
     app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
 else:
-    # Local development (SQLite)
+    # Local SQLite
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///instance/database.db"
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
 db = SQLAlchemy(app)
 
 # =====================
@@ -35,6 +38,13 @@ class User(db.Model):
     password = db.Column(db.String(80), nullable=False)
 
 # =====================
+# 🔥 THIS IS THE MISSING PART 🔥
+# CREATE TABLES FOR GUNICORN / RENDER
+# =====================
+with app.app_context():
+    db.create_all()
+
+# =====================
 # HELPERS
 # =====================
 def has_sequential_chars(password, seq_len=3):
@@ -43,7 +53,7 @@ def has_sequential_chars(password, seq_len=3):
 
     for seq in sequences:
         for i in range(len(seq) - seq_len + 1):
-            if seq[i:i+seq_len] in password:
+            if seq[i:i + seq_len] in password:
                 return True
     return False
 
@@ -128,9 +138,7 @@ def logout():
     return redirect(url_for("home"))
 
 # =====================
-# APP START (SAFE)
+# LOCAL RUN ONLY
 # =====================
 if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
     app.run()
