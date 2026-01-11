@@ -2,11 +2,18 @@ from flask import Flask, render_template, redirect, url_for, request, session
 from flask_sqlalchemy import SQLAlchemy
 import re
 import string
+import os
 
 app = Flask(__name__)
 app.secret_key = "secret123"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///instance/database.db'
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+if DATABASE_URL:
+    app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///instance/database.db'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
